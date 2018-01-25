@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Form</title>
+<link rel="stylesheet" type="text/css" href="login1.css">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="login-page">
+	<div class = "form">
+	<form class = "register-form" name = "myform" onsubmit = "submitFuntion()">
+	<input type = "text" placeholder = "User Name"/>
+	<input type = "text" placeholder = "Password"/>
+	<input type = "text" placeholder = "Email ID"/>
+	<button type = "submit"> Create</button>
+	<p class = "message">Already Registered? <a href = "#"> Login </a>
+	</p>
+	</form>
+	
+	<form class = "login-form" name = "myform" onsubmit = "submitFunction()">
+	<input type = "type" placeholder = "User Name"/>
+	<input type = "password" placeholder = "Password"/>
+	<button type = "submit"><a href = "abc.html">login</a></button>
+	<p class = "message">Not Registered? <a href = "#">Register</a><p>
+	</form>
+	</div>
+	</div>
+
+	<script src = 'https://code.jquery.com/jquery-3.3.1.min.js'>
+	</script>
+	
+	<script>
+	$('.message a').click(function()){
+	$('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+	});
+	</script>
+	
+	<script>
+	function submitFunction(){
+	var x = document.forms["myform"]["username"].value;
+	var y = document.forms["myform"]["pwd"].value;
+	if(x==null || x==""||y==null||y=="")
+	{
+	alert("Both fields can't be empty.");
+	}
+	else{
+	if(x=="webi")
+	{
+	if(y=="12345")
+	{
+	alert("Login successful");
+	}
+	else{
+	alert{"Password do not match");
+	}
+	}
+	else{
+	alert("User doesn't exsit");
+	}
+	}
+	}
+	</script>
+</body>
+
+</html>
